@@ -1,4 +1,6 @@
 import csv
+from pdb import set_trace
+
 path = 'data.csv'
 
 x = []
@@ -9,10 +11,21 @@ with open(path, newline='') as f:
 	for row in reader:
 		x.append(row[1])
 		y.append(row[2])
-print(x)
-print(y)
+# print(x)
+# print(y)
 		
-baseline = (x[1], y[1])
+baseline = [(int(x[1]), int(y[1]))]
 
-variations = [(x[2], y[2]),(x[3], y[3]), (x[4],y[4]), (x[5], y[5])]
+variations = [(int(x[2]), int(y[2])),(int(x[3]), int(y[3])),(int(x[4]),int(y[4])), (int(x[5]), int(y[5]))]
+# print(baseline, variations)
+
+def success_ratio(input):
+	sr = []
+	for i, v in input:
+		sr.append(float(i/v))
+	print(sr)
+
+success_ratio(baseline)
+success_ratio(variations)
+
 

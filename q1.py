@@ -36,9 +36,6 @@ This question should be written in Python. '''
 
 import sys
 import re
-import pandas as pd
-# from nltk import ngrams, FreqDist
-# file = open('sample.txt', 'r')
 
 
 def word_count(file):
@@ -75,13 +72,6 @@ def average_sentence_length(sentences):
 		counter = 0
 	return float(sum(number_of_words)/len(sentences))
 
-# def common_phrase(sentences):
-# 	all_counts = dict()
-# 	for i in sentences:
-# 		for size in 3, 4, 5:
-# 			all_counts[size] = FreqDist(ngrams(i, size))
-# 	return all_counts
-
 def list_of_words(unique_words, sentences):
 	words = []
 	dictionary = {}
@@ -100,7 +90,6 @@ def list_of_words(unique_words, sentences):
 	for i in sorted_by_value:
 		sorted_words.append(i[0])
 	return sorted_words
-
 
 filename = sys.argv[1]
 

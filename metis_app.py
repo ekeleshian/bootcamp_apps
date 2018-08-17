@@ -24,9 +24,10 @@ while number_of_tries >= 0:
 		print('You guessed right!')
 		x = 'winner'
 		break
-	
-# if x != 'winner':
-# 	print('You have lost the game')
+
+
+
+
 
 
 
